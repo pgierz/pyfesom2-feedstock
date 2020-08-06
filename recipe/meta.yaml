@@ -1,13 +1,13 @@
 {% set name = "pyfesom2" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://github.com/FESOM/pyfesom2/archive/{{ version }}.tar.gz
-  sha256: 90363de4f6b78f9eec72ac1f030ae2561062cd9c05a7ce6736f886fd1cf6c347
+  sha256: 93ef0df2a714ae617c14f683ee2bcfdac0f40d13b69b6c971928d88f8106a5fb
 
 build:
   number: 0
@@ -15,7 +15,7 @@ build:
   entry_points:
     - pfplot=pyfesom2.pfplot:pfplot
     - pfinterp=pyfesom2.pfinterp:pfinterp
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -49,11 +49,11 @@ test:
 
 
 about:
-  home: "https://github.com/FESOM/pyfesom2/"
+  home: https://github.com/FESOM/pyfesom2/
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "FESOM2 tools"
+  summary: FESOM2 tools
   doc_url: https://pyfesom2.readthedocs.io/
   dev_url: https://github.com/FESOM/pyfesom2/
 
