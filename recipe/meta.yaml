@@ -23,7 +23,6 @@ requirements:
     - pytest-runner
     - python >=3
   run:
-    - basemap
     - cartopy
     - cmocean
     - dask
