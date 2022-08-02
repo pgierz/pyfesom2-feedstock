@@ -16,6 +16,8 @@ build:
     - pfplot=pyfesom2.pfplot:pfplot
     - pfinterp=pyfesom2.pfinterp:pfinterp
   script: {{ PYTHON }} -m pip install . -vv
+  always_include_files:
+    - pyfesom2/geojson
 
 requirements:
   host:
