@@ -15,7 +15,7 @@ build:
   entry_points:
     - pfplot=pyfesom2.pfplot:pfplot
     - pfinterp=pyfesom2.pfinterp:pfinterp
-  script: {{ PYTHON }} -m pip install . -vv; cp -r {{ RECIPE_DIR }}/pyfesom2/geojson {{ SP_DIR }}/pyfesom2
+  script: {{ PYTHON }} -m pip install . -vv; ls -lR {{ RECIPE_DIR }}; cp -rv {{ RECIPE_DIR }}/pyfesom2/pyfesom2/geojson {{ SP_DIR }}/pyfesom2
   always_include_files:
     - pyfesom2/geojson
 
