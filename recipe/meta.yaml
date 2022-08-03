@@ -15,7 +15,7 @@ build:
   entry_points:
     - pfplot=pyfesom2.pfplot:pfplot
     - pfinterp=pyfesom2.pfinterp:pfinterp
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv; cp -r {{ RECIPE_DIR }}/pyfesom2/geojson {{ SP_DIR }}/pyfesom2
 
 requirements:
   host:
