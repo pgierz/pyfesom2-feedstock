@@ -10,7 +10,7 @@ source:
   sha256: 93ef0df2a714ae617c14f683ee2bcfdac0f40d13b69b6c971928d88f8106a5fb
 
 build:
-  number: 2
+  number: 3
   noarch: python
   entry_points:
     - pfplot=pyfesom2.pfplot:pfplot
