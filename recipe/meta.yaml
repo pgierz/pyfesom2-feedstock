@@ -16,6 +16,8 @@ build:
     - pfplot=pyfesom2.pfplot:pfplot
     - pfinterp=pyfesom2.pfinterp:pfinterp
   script: {{ PYTHON }} -m pip install . -vv; cp -r {{ RECIPE_DIR }}/pyfesom2/geojson {{ SP_DIR }}/pyfesom2
+  always_include_files:
+    - pyfesom2/geojson
 
 requirements:
   host:
@@ -23,7 +25,6 @@ requirements:
     - pytest-runner
     - python >=3
   run:
-    - basemap
     - cartopy
     - cmocean
     - dask
